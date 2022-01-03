@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SlonikPay</title>
+    @Scripts.Render("~/scripts/jquery-1.10.2.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/scripts/validate.min.js")
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        @*body {
+            margin: 0;
+            font-family: arial;
+            background: url(../../Content/Images/Stanok.jpg);
+            background-repeat:no-repeat;
+            background-size: 1920px;
+            background-attachment:fixed;
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }*@
+    </style>
+</head>
+
+@section Scripts {
+    @Scripts.Render("~/scripts/validate.min.js")
+}
+
+
+<body>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+<div class="btn-group">
+
+
+    <script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")"></script>
+    <script src="@Url.Content("~/scripts/jquery.unobtrusive-ajax.js")"></script>
+
+</div>
+
+@*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+*@</html>

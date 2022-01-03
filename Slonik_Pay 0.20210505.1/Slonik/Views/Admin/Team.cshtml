@@ -1,0 +1,143 @@
+﻿@using Slonik.Models
+
+@{
+    ViewBag.Title = "Team";
+}
+
+<style>
+    a {
+        font-family: Arial;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+
+        a:hover {
+            background: #5d1aed;
+            border-radius: 20px;
+        }
+
+    main {
+        padding-top: 50px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        margin: auto;
+        width: 80%;
+        min-width: 70%;
+        max-width: 100%;
+        box-shadow: 0px 0px 5px 5px black;
+        opacity: 90%;
+        height: 100%;
+        min-height: 605px;
+        flex: 1 0 auto;
+    }
+        main a {
+            color: black
+        }
+
+        main a:hover{
+            color:white
+        }
+
+    body {
+        margin: 0;
+        font-family: arial;
+        background: url(../../Content/Images/Stanok.jpg) no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+
+    header {
+        background-color: #000;
+        width: 98%;
+        height: 15%;
+        max-height: 46px;
+        padding: 1%;
+        margin: 0px;
+    }
+
+    footer {
+        background-color: black;
+        width: 100%;
+        height: 17%;
+        max-height: 50px;
+        margin-top: 0;
+        color: white;
+        text-align: center;
+        padding-top: 0.1%;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    a {
+        font-family: Arial;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+
+        a:hover {
+            background: #5d1aed;
+            border-radius: 20px;
+        }
+
+    .devPic {
+        border-radius: 20px 0px 0px 20px;
+        margin-right: 2%;
+    }
+
+    .info {
+        padding-top: 10%;
+    }
+
+    .devCard {
+        float: left;
+        border: solid;
+        border-color: black;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px 1px black;
+        padding: 0;
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        padding-right: 2%;
+    }
+</style>
+
+<body>
+    <header style="align-content:center; text-align:center;">
+        <div style="padding:0px; text-align:center; margin-left:5%">
+            <img src="~/Content/Images/SlonikLogo.jpg" style="width: 4%; margin: 0px; float: left; border-radius: 50px; margin-top: -0.5%">
+            <p style="color: white; float: left; font-family: arial; font-size: 30px;margin: 0; margin-left: 0.5%; ">Slonik Pay</p>
+        </div>
+
+        <div style="display:inline-block; padding:0; margin-left:-15%; margin-top:0.7%">
+            <a href="~/admin/index">Главная</a>
+            <a href="~/admin/AddDetail">Добавить деталь</a>
+            <a href="~/admin/showall">Все детали</a>
+            <a href="~/admin/lastorder">Последний заказ</a>
+            <a href="~/admin/ShowAllArhiv">Архив</a>
+            <a href="~/admin/ShowObor">Станки</a>
+            <a href="~/home/indexstart">Выход</a>
+        </div>
+    </header>
+
+    <main>
+        <h2 style="text-align:center">Mikrasavchiki team</h2>
+
+        <div class="devCard"><img src="~/Content/Developers/Alexandr.Visockiy.png" class="devPic" style="width:30%; float:left" /><p class="info">Александр Высоцкий - Team Lead проекта, backend-разработчик; человек, который может заставить работать</p><a href="tel:+380971601613">+380-97-160-1613</a></div>
+        <div class="devCard"><img src="~/Content/Developers/Tatiana.Kazarina.png" class="devPic" style="width:30%; float:left" /><p class="info">Татьяна Казарина - Гуру баз данных</p><a href="tel:+380987788983">+380-98-778-8983</a></div>
+        <div class="devCard"><img src="~/Content/Developers/Vitaliy.Bielikov.jpg" class="devPic" style="width:30%; float:left" /><p class="info">Виталий Беликов - Frontend-раздолбай</p><a href="tel:+380972645548">+380-97-264-55-48</a></div>
+        <div class="devCard"><img src="~/Content/Developers/Daniil.Nosur.png" class="devPic" style="width:30%; float:left" /><p class="info">Даниил Носур - Юный гений кода</p><a href="tel:+380980131719">+380-98-013-1719</a></div>
+        <div class="devCard"><img src="~/Content/Developers/Vladislav.Krotikov.png" class="devPic" style="width:30%; float:left" /><p class="info">Владислав Кротиков - Мастер на все руки</p><a href="tel:+380974325606">+380-97-432-5606</a></div>
+    </main>
+
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year <a href="~/admin/team">Mikrasavchiki team</a></p>
+    </footer>
+</body>

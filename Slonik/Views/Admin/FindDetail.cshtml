@@ -1,0 +1,37 @@
+﻿@using Slonik.Models
+@model FindModel
+@{
+    ViewBag.Title = "FindDetail";
+}
+
+<div style="display:inline-block">
+    <a href="~/admin/index">Главная</a>
+    <a href="~/admin/AddDetail">Добавить деталь</a>
+    <a href="~/admin/showall">Все детали</a>
+    <a href="~/admin/lastorder">Последний заказ</a>
+    <a href="~/admin/ShowAllArhiv">Архив</a>
+    <a href="~/admin/ShowObor">Станки</a>
+    <a href="~/home/indexstart">Выход</a>
+</div>
+
+<h2>Поиск детали</h2>
+
+<body>
+
+    @using (Ajax.BeginForm("ShowDetal", null, new AjaxOptions { LoadingElementDuration = 1000, UpdateTargetId = "result", HttpMethod = "post" }, null)) //Реализация запроса с помощью Ajax
+    {
+        <div>
+            <div>@Html.Label("Название ")</div>
+            <div>@Html.TextBoxFor(x => x.Nazvanie)</div>
+        </div>
+        <div>
+            <div>@Html.Label("Номер заказа: ")</div>
+            <div>@Html.TextBoxFor(x => x.NumOrder)</div>
+        </div>
+        <div><input type="submit" value="search" /></div>
+    }
+
+    <div id="result" style="margin-left: 18%; width: 100%; height: 50%; display: flex;"></div> @*//Сюда будет осуществляться вывод окна с результатами поиска. *@
+
+</body>
+

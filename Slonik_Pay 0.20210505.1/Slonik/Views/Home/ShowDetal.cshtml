@@ -1,0 +1,40 @@
+﻿@using Slonik.Models
+@model Detal
+@{
+    ViewBag.Title = "ShowDetal";
+}
+
+<div style="text-align:center; padding:60px;">
+    <table class="table table-bordered" border="1" style="text-align:center;">
+        <tr>
+            <td>Номер заказа</td>
+            <td>Название</td>
+            <td>Диаметр (мм)</td>
+            <td>Диаметр отверстия (мм)</td>
+            <td>Вес Детали (кг)</td>
+            <td>Материал</td>
+            <td>Тип обработки</td>
+            <td>Длина детали (мм)</td>
+            <td>Длина поверхности обработки (мм)</td>
+            <td>Стоимость детали</td>
+        </tr>
+
+        <tr>
+            <td>@Model.NumOrder</td>
+            <td>@Model.Nazvanie</td>
+            <td>@Model.D </td>
+            <td>@Model.dO </td>
+            <td>@Model.WeithDetail </td>
+            <td>@Model.Materia </td>
+            <td>@Model.TypeObr </td>
+            <td>@Model.LDetal </td>
+            <td>@Model.LProt</td>
+            <td>@Model.StoimostRashot</td>
+
+
+        </tr>
+
+        <img src="@Model.Picture" style="height:500px;" />
+
+    </table>
+</div>
